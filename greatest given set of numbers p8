@@ -1,0 +1,18 @@
+echo “GREATEST AMONG THE GIVEN SET OF NUMBERS”
+echo “************************************************”
+echo Enter 3 numbers with spaces in between
+read a b c
+l=$a
+if [ $b -gt $l ]
+then
+l=$b
+fi
+if [ $c -gt $l ]
+then
+l=$c
+fi
+echo "Largest of $a $b $c is $l"
+if [ $a -eq $b ] && [ $a -eq $c ] && [ $b -eq $c ]
+then
+echo "All numbers are equal"
+fi

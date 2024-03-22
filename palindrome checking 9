@@ -1,0 +1,14 @@
+echo “ PALINDROME CHECKING ”
+echo “**************************”
+echo "Enter a string:"
+read str
+for i in $(seq 0 ${#str}); do
+revstr=${str:$i:1}$revstr
+done
+echo "Given string:" $str
+echo "Reverse string " $revstr
+if [ "$str" = "$revstr" ]; then
+echo "Given string is palindrome"
+else
+echo "Its not a palindrome"
+fi

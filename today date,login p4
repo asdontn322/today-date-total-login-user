@@ -1,0 +1,28 @@
+choice=0
+while [ $choice -ne 4 ]
+do
+tput clear
+echo " LOG IN DETAILS "
+echo "*************** "
+echo "1.Today date"
+echo "2.Total login user"
+echo "3.File Listing and directories"
+echo "4.Exit"
+read choice
+if [ $choice -eq 1 ]
+then
+echo "today is `date`"
+elif [ $choice -eq 2 ]
+then
+echo "As of now `who` user are login to the system"
+elif [ $choice -eq 3 ]
+then
+echo "`ls`"
+fi
+echo "are you continue(1 for yes /0 for no)"
+read temp
+if [ $temp -eq 0 ]
+then
+choice=4
+fi
+done

@@ -1,0 +1,81 @@
+1. WC commands:
+[pioneer@localhost ~]$ wc pp.sh
+46 139 671 pp.sh
+[pioneer@localhost ~]$ wc -c pp.sh
+671 pp.sh
+[pioneer@localhost ~]$ wc -l pp.sh
+46 pp.sh
+[pioneer@localhost ~]$ wc -w pp.sh
+139
+.sh2. Pipe(|):
+[pioneer@localhost ~]$ ls -a | grep '^d'
+devi
+devi1.sh
+devi1.shaa
+devi1.shab
+devi2.sh
+[pioneer@localhost ~]$ ps aux | wc –l
+211
+[pioneer@localhost ~]$ locate "*.java" | grep java
+/usr/lib64/libreoffice/share/Scripts/java/HelloWorld/HelloWorld.java
+/usr/lib64/libreoffice/share/Scripts/java/Highlight/HighlightText.java
+/usr/lib64/libreoffice/share/Scripts/java/MemoryUsage/MemoryUsage.java
+/usr/share/devassistant/files/crt/java/jsf/src/main/java/org/devassistant/jsf/Index.java
+3. HEAD :
+[pioneer@localhost ~]$ head pp.sh
+clear
+echo -n "Enter a string to be entered:"
+read str
+echo
+len=`echo $str | wc -c`
+len=`expr $len - 1`
+i=1
+j=`expr $len / 2`
+while test $i -le $j
+do
+[pioneer@localhost ~]$ head -5 pp.sh
+clear
+echo -n "Enter a string to be entered:"
+read str
+echo
+len=`echo $str | wc -c`
+4. MORE:
+[pioneer@localhost ~]$ more pp.sh
+clear
+echo -n "Enter a string to be entered:"
+read strecho
+len=`echo $str | wc -c`
+len=`expr $len - 1`
+i=1
+j=`expr $len / 2`
+while test $i -le $j
+--More--(50%)
+[pioneer@localhost ~]$ more -2 pgm5
+1
+2
+5. GREP:
+[pioneer@localhost ~]$ vi test.sh
+pioneer college coimbatore
+red
+green
+RED
+blue
+psg college coimbatore
+[pioneer@localhost ~]$ grep "red" test.sh
+red
+[pioneer@localhost ~]$ grep -i "red" test.sh
+red
+RED
+[pioneer@localhost ~]$ grep "red" test*
+test:red
+test1:red
+[pioneer@localhost ~]$ grep -n "red" test.sh
+2:red
+[pioneer@localhost ~]$ grep -blue "ksg" test.sh
+test
+[pioneer@localhost ~]$ grep -v red test.sh
+Pioneer college coimbatore
+green
+RED
+blue
+psg college coimbatore
